@@ -6,7 +6,7 @@ import Image from 'next/image';
 const MeetTheTeamSection = () => {
   return (
     <section className="bg-[#F8FBF8] py-16 sm:py-24">
-      <div className="container mx-auto px-4">
+      <div className="max-w-[1200px] mx-auto px-4">
         
         <div className="mx-auto max-w-5xl text-center">
           <SectionPill>Meet The Team</SectionPill>

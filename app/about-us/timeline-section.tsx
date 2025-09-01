@@ -5,11 +5,11 @@ import SectionPill from './section-pill';
 const TimelineSection = () => {
   return (
     <section className="bg-white">
-      <div className="container mx-auto px-">
+      <div className="max-w-[1200px] mx-auto px-4">
         
         <div className="mx-auto max-w-5xl text-center">
           <SectionPill>Timeline</SectionPill>
-          <h2  className="mt-4 text-[28px] font-bold text-start leading-snug"
+          <h2  className="mt-4 text-[28px] font-bold text-start leading-snug "
             style={{ fontFamily: 'Britti Sans Trial' }}>
             Explore key milestones that shaped Covenant MFB&apos;s journey, highlighting growth, innovation, and community impact over the years.
           </h2>
@@ -28,7 +28,7 @@ const TimelineSection = () => {
 
           <div className="block lg:hidden">
             <Image
-              src="/timeline1.jpg" 
+              src="/history3.svg" 
               alt="A vertical timeline of Covenant MFB's history."
               width={400} 
               height={1200}

@@ -5,7 +5,7 @@ import SectionPill from './section-pill';
 const OurHistorySection = () => {
   return (
     <section className="bg-white py-16 sm:py-10">
-      <div className="container mx-auto px-4">
+      <div className="max-w-[1200px] mx-auto px-4">
 
         <div className="mx-auto max-w-5xl text-center">
           <SectionPill>Our History</SectionPill>
