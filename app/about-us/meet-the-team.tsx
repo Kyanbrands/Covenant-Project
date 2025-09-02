@@ -23,7 +23,8 @@ const MeetTheTeamSection = () => {
 
         <div className="mt-16">
           <h2 className="text-center text-2xl font-semibold text-gray-600">Board Members</h2>
-<div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-items-center">            {boardMembers.map((member) => (
+         <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-items-center">            
+              {boardMembers.map((member) => (
               <div key={member.id} className="text-center">
                 <Image
                   src={member.imageUrl}
@@ -40,7 +41,8 @@ const MeetTheTeamSection = () => {
           <h2 className="text-center text-2xl font-semibold text-gray-600">
             Management Staff
           </h2>
-           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  justify-items-center">            {managementStaff.map((member) => (
+           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  justify-items-center">           
+             {managementStaff.map((member) => (
               <div key={member.id} className="text-center">
                 <Image
                   src={member.imageUrl}
@@ -59,3 +61,7 @@ const MeetTheTeamSection = () => {
 };
 
 export default MeetTheTeamSection;
+
+
+
+

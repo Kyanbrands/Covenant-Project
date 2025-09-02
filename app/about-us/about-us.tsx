@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import SectionPill from './section-pill';
 
 const AboutHeroSection = () => {
   return (
@@ -8,7 +9,7 @@ const AboutHeroSection = () => {
         src="/path1.svg"
         alt="Stylized world map"
         fill
-        className="absolute inset-0 z-0 object-cover hidden lg:block"
+        className="absolute inset-0 z-0 object-contain hidden md:block"
         priority
       />
 
@@ -16,28 +17,42 @@ const AboutHeroSection = () => {
         src="/Group1.svg"
         alt="A vertical timeline of Covenant MFB's history."
         fill
-        className="absolute inset-0 z-0 object-contain  block lg:hidden"
+        className="absolute inset-0 z-0 object-contain object-bottom  block md:hidden"
         priority
       />
 
-      <div className="relative z-10 flex w-full max-w-6xl items-center justify-center text-center">
+      <div className="relative z-10 flex w-full max-w-6xl items-center justify-center text-center md:hidden">
         <div className="px-4">
-          <span className="mb-4 inline-flex items-center rounded-full border border-green-300 bg-white/80 px-3 py-1.5 text-xs font-medium text-green-700 backdrop-blur-sm sm:px-4 sm:py-2 sm:text-sm">
-            <span className="mr-2 hidden h-2 w-2 rounded-full bg-green-500 sm:block"></span>
-            About Us
-          </span>
-          <h1 className="font-britti tracking-tight text-[#0D1A26] text-3xl leading-tight sm:text-4xl lg:text-5xl font-bold">
+          <SectionPill>About Us</SectionPill>
+
+          <h1 className="font-britti tracking-tight text-[#0D1A26] text-3xl leading-tight sm:text-4xl font-bold">
             <span className="hidden sm:block">
               Behind the Bank: <br />
             </span>
-            Our People, Our Purpose, <br />
+            Our People,<br/>
+             Our Purpose, <br />
             Our Promise
           </h1>
         </div>
         
+      </div>
+
+       <div className="relative z-10 hidden w-full max-w-6xl items-center justify-center text-center md:flex">
+        <div className="px-4">
+          <SectionPill>About Us</SectionPill>
+
+          <h1 className="font-britti tracking-tight text-[#0D1A26] text-4xl leading-tight sm:text-4xl lg:text-7xl font-bold">
+            Behind the Bank: <br />
+            Our People, Our Purpose, <br />
+            Our Promise
+          </h1>
+        </div>
       </div>
     </section>
   );
 };
 
 export default AboutHeroSection;
+
+
+

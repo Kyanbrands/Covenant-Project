@@ -28,3 +28,6 @@ export const managementStaff: TeamMember[] = [
   {id:11, name: 'Oluwaseun Tunji-Salawu', role: 'Branch Manager, Ota Ogun State', imageUrl: '/Group2.png' },
   {id:12, name: 'Koseriphr Michael Oludipe', role: 'Branch Manager, Akungba, Ondo', imageUrl: '/Group3.png' },
 ];
+
+
+
