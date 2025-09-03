@@ -1,8 +1,10 @@
+'use client'
 import { ChevronDown, MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import MobileNavbar from "./mobile-navbar";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   {
@@ -39,9 +41,17 @@ const navItems = [
 ];
 
 const Navbar = () => {
+
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
   return (
-    <nav className="absolute w-full z-50 py-4 lg:py-7 px-4">
-      <div className="max-w-[1100px] mx-auto flex justify-between items-center">
+ <nav 
+      className={`absolute w-full z-50 py-3 lg:py-4 px-4 transition-colors duration-300 ${
+        isHomePage ? 'bg-transparent' : 'bg-[#001102]' 
+      }`}
+    >
+
+     <div className="max-w-[1100px] mx-auto flex justify-between items-center">
         <Image
           src={"/icons/logo.svg"}
           alt="company logo"
@@ -49,18 +59,23 @@ const Navbar = () => {
           height={53}
         />
         <div className="hidden lg:flex items-center gap-7.5 text-[#DBE4C4] text-[13px]">
-          {navItems.map((item, index) => (
-            <div className="flex items-center gap-1 cursor-pointer" key={index}>
-              <div className="flex items-center gap-1.5">
-                <Image src={item.icon} alt={item.text} width={14} height={15} />
-                <p>{item.text}</p>
-              </div>
-              {item.isDropdown && (
-                <ChevronDown className="h-[14px] w-[14px] mt-0.5" />
-              )}
-            </div>
-          ))}
+       {navItems.map((item) => (
+           item.isDropdown ? (
+          <div key={item.route} className="flex items-center gap-1 cursor-pointer">
+            <div className="flex items-center gap-1.5">
+          <Image src={item.icon} alt={item.text} width={14} height={15} />
+          <p>{item.text}</p>
         </div>
+        <ChevronDown className="h-[14px] w-[14px] mt-0.5" />
+          </div>
+          ) : (
+      <Link key={item.route} href={item.route} className="flex items-center gap-1.5 transition-colors hover:text-white">
+        <Image src={item.icon} alt={item.text} width={14} height={15} />
+        <p>{item.text}</p>
+      </Link>
+          )
+        ))}
+      </div>
         <div className="hidden lg:flex w-fit relative">
           <div className="absolute top-0 left-5 max-w-3/4 mx-auto w-full h-[2px] bg-gradient-to-r from-transparent via-[#75FF8C] to-transparent rounded-full z-40" />
           <Link
