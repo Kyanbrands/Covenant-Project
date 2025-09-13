@@ -5,40 +5,7 @@ import Link from "next/link";
 import React from "react";
 import MobileNavbar from "./mobile-navbar";
 import { usePathname } from "next/navigation";
-
-const navItems = [
-  {
-    icon: "/icons/about_icon.svg",
-    text: "About Us",
-    route: "/about-us",
-  },
-  {
-    icon: "/icons/products_icon.svg",
-    text: "Products",
-    route: "/products",
-    isDropdown: true,
-  },
-  {
-    icon: "/icons/news_icon.svg",
-    text: "News",
-    route: "/news",
-  },
-  {
-    icon: "/icons/support_icon.svg",
-    text: "Support",
-    route: "/support",
-  },
-  {
-    icon: "/icons/careers_icon.svg",
-    text: "Careers",
-    route: "/careers",
-  },
-  {
-    icon: "/icons/contact_icon.svg",
-    text: "Contact",
-    route: "/contact",
-  },
-];
+import { NAV_ITEMS } from "@/app/_data/nav-items";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -60,7 +27,7 @@ const Navbar = () => {
             height={53}
           />
           <div className="hidden lg:flex items-center gap-7.5 text-[#DBE4C4] text-[13px]">
-            {navItems.map((item) =>
+            {NAV_ITEMS.map((item) =>
               item.isDropdown ? (
                 <div
                   key={item.route}
