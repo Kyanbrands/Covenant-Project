@@ -10,22 +10,16 @@ import TimelineSection from "./timeline-section";
 const AboutPage = () => {
   return (
     <div>
-  <AboutHeroSection/>
- <WhoWeAreSection/>
- <NumbersSection/>
- <OurHistorySection/>
- <TimelineSection/>
- <MeetTheTeamSection/>
-<Testimonials/>
-<Carousel/>
-
- 
-  </div>
-  
-  )
-  
+      <AboutHeroSection />
+      <WhoWeAreSection />
+      <NumbersSection />
+      <OurHistorySection />
+      <TimelineSection />
+      <MeetTheTeamSection />
+      <Testimonials />
+      <Carousel />
+    </div>
+  );
 };
 
 export default AboutPage;
-
-

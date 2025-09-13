@@ -1,6 +1,6 @@
-'use client';
-import Image from 'next/image';
-import SectionPill from './section-pill';
+"use client";
+import Image from "next/image";
+import SectionPill from "../../components/ui/section-pill";
 
 const AboutHeroSection = () => {
   return (
@@ -29,15 +29,15 @@ const AboutHeroSection = () => {
             <span className="hidden sm:block">
               Behind the Bank: <br />
             </span>
-            Our People,<br/>
-             Our Purpose, <br />
+            Our People,
+            <br />
+            Our Purpose, <br />
             Our Promise
           </h1>
         </div>
-        
       </div>
 
-       <div className="relative z-10 hidden w-full max-w-6xl items-center justify-center text-center md:flex">
+      <div className="relative z-10 hidden w-full max-w-6xl items-center justify-center text-center md:flex">
         <div className="px-4">
           <SectionPill>About Us</SectionPill>
 
@@ -53,6 +53,3 @@ const AboutHeroSection = () => {
 };
 
 export default AboutHeroSection;
-
-
-
