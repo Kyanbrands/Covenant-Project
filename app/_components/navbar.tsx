@@ -110,7 +110,6 @@ const Navbar = () => {
               Create Account
             </Link>
           </div>
-          <MobileNavbar />
         </div>
         {/* Mobile Navbar */}
       </nav>
