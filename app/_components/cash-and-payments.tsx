@@ -14,7 +14,7 @@ const CashAndPayments = () => (
     >
       <div className="flex flex-col justify-center items-start w-full lg:w-1/2 h-full px-8 py-12"></div>
 
-      <div className="absolute z-20 lg:bottom-0 lg:right-0 flex flex-col justify-center items-center lg:justify-end lg:items-end lg:max-w-[380px] w-full h-full bg-[#F1F5EB]/60 backdrop-blur-lg py-8 px-4 lg:px-6 rounded-[12px] lg:rounded-[39px] lg:text-right">
+      <div className="absolute z-20 lg:bottom-0 lg:right-0 flex flex-col justify-center items-center lg:justify-end lg:items-end lg:max-w-[380px] w-full h-full bg-[#F1F5EB]/40 backdrop-blur-md py-8 px-4 lg:px-6 rounded-[12px] lg:rounded-[39px] lg:text-right">
         <h2 className="text-[#04400D] font-bold text-3xl lg:text-[45px] mb-4">
           Cash and payments, anywhere.
         </h2>
