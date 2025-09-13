@@ -29,7 +29,7 @@ const Gallery = () => {
     <section className="py-6 lg:py-16 flex flex-col items-center justify-center gap-6 px-4">
       <Title text="Gallery" borderColor="[#1D9B5E]/40" textColor="#1D9B5E" />
       <div className="max-w-[945px] mx-auto mb-8">
-        <h2 className="font-semibold text-[28px] text-[#020617]">
+        <h2 className="font-semibold text-xl lg:text-[28px] text-[#020617]">
           Explore Covenant MFB’s journey through captivating photos of
           milestones, events, and community impact moments.
         </h2>

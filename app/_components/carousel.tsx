@@ -39,8 +39,8 @@ const Carousel = () => {
 
       <div className="flex justify-between items-center w-full py-6">
         <div className="carousel-swiper-pagination flex justify-center" />
-        <div className="flex gap-4 justify-center items-center">
-          <Button className="carousel-prev rounded-full bg-transparent border-2 border-[#043B20] w-10 h-10 flex items-center justify-center">
+        <div className="gap-4 justify-center items-center mr-20 hidden lg:flex">
+          <Button className="carousel-prev rounded-full bg-transparent border-2  border-[#043B20] w-10 h-10 flex items-center justify-center">
             <ArrowLeft className="text-[#043B20] w-6 h-6" />
           </Button>
           <Button className="carousel-next rounded-full bg-[#043B20] w-10 h-10 flex items-center justify-center">

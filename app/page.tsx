@@ -11,9 +11,12 @@ import Carousel from "./_components/carousel";
 
 const page = () => {
   return (
-    <div>
+    <main className="min-h-screen">
       <HeroSection />
-      <WhyChooseUs />
+      <div className="lg:mt-[-0px] 3xl:mt-[-100px]  bg-white">
+        <WhyChooseUs />
+      </div>
+
       <NumbersSection />
       <ProductsSection />
       <Testimonials />
@@ -21,7 +24,7 @@ const page = () => {
       <Gallery />
       <FAQSection />
       <Carousel />
-    </div>
+    </main>
   );
 };
 

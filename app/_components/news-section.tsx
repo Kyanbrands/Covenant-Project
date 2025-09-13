@@ -39,7 +39,7 @@ const NewsSection = () => {
           textColor="#1D9B5E"
         />
         <div className="max-w-[655px] mx-auto mb-8">
-          <h2 className="font-semibold text-[28px] text-[#020617]">
+          <h2 className="font-semibold text-lg lg:text-[28px] text-[#020617]">
             Stay Updated with the latest news, events and official announcements
             from Covenant MFB
           </h2>

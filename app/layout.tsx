@@ -4,15 +4,22 @@ import "./globals.css";
 import Navbar from "./_components/navbar";
 import CTA from "./_components/cta-section";
 import Footer from "./_components/footer-section";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const myFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/BrittiSansTrial-Regular-BF6757bfd47ffbf.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/BrittiSansTrial-Bold-BF6757bfd4a96ed.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-britti",
 });
 
 export const metadata: Metadata = {
@@ -27,9 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${myFont.className} antialiased`}>
         <Navbar />
         {children}
         <CTA />

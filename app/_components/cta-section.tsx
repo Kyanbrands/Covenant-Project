@@ -7,7 +7,7 @@ const CTA = () => (
     className="relative w-full flex justify-center items-center z-30 mt-12"
     style={{ marginBottom: "-120px" }}
   >
-    <div className="w-full max-w-6xl bg-gradient-to-b from-[#1D9B5E] to-[#074426] rounded-[12px] lg:rounded-[32px] flex flex-col lg:flex-row items-center justify-between gap-6 py-12 lg:py-20 px-4 lg:px-16 shadow-xl">
+    <div className="w-full max-w-6xl bg-gradient-to-b p-4 mx-5  lg:mx-0 from-[#1D9B5E] to-[#074426] rounded-[12px] lg:rounded-[32px] flex flex-col lg:flex-row items-center justify-between gap-6 py-12 lg:py-20 px-4 lg:px-16 shadow-xl">
       <div className="flex-1 text-left max-w-[471px]">
         <h2 className="text-white font-semibold text-3xl lg:text-[40px] mb-4">
           Bank News in Your Inbox

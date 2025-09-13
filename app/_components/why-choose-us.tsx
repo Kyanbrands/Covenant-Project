@@ -46,7 +46,7 @@ const subCardTwo = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="max-w-[1200px] mx-auto py-6 lg:py-16 ">
+    <section className="max-w-[1200px] mx-auto py-6 lg:py-16 z-10"> 
       <div className="flex flex-col items-center justify-center gap-6 px-4">
         <Title
           text="Why Choose Us"

@@ -81,7 +81,7 @@ const FAQSection = () => {
         textColor="#1D9B5E"
       />
       <div className="max-w-[945px] mx-auto mb-8">
-        <h2 className="font-semibold text-[28px] text-[#020617]">
+        <h2 className="font-semibold text-xl lg:text-[28px] text-[#020617]">
           Find quick answers to common questions about Covenant MFB — helping
           you bank smarter with clarity, ease, and confidence.
         </h2>

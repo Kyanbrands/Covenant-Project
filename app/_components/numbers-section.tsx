@@ -12,7 +12,7 @@ const NumbersSection = () => {
           textColor="#A2DE49"
         />
         <div className="max-w-[950px]">
-          <h2 className="font-semibold text-[28px] text-[#F1F5EB]">
+          <h2 className="font-semibold text-xl lg:text-[28px] text-[#F1F5EB]">
             Our numbers tell the story. From lives impacted to transactions
             processed, these figures reflect our commitment to trust, growth and
             every service
