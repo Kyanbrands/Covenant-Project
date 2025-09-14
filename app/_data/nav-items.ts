@@ -17,8 +17,8 @@ export const NAV_ITEMS = [
   },
   {
     icon: "/icons/support_icon.svg",
-    text: "Support",
-    route: "/support",
+    text: "FAQs",
+    route: "/faq",
   },
   {
     icon: "/icons/careers_icon.svg",
