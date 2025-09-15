@@ -11,9 +11,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { AccountData } from "@/app/_data/accounts-data";
 import { AccountDetailDialog } from "./account-detail-dialog";
-
 import { useState } from "react";
-
+import { AccountMobileDrawer } from "./account-mobile-drawer";
 
 interface AccountCardProps {
   account: AccountData;
@@ -24,14 +23,15 @@ export function AccountCard({ account }: AccountCardProps) {
     null
   );
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const handleViewDetails = (account: AccountData) => {
-    setSelectedAccount(account);
-    setIsDialogOpen(true);
-  };
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
 
   const handleCloseDialog = () => {
     setIsDialogOpen(false);
+    setSelectedAccount(null);
+  };
+
+  const handleCloseDrawer = () => {
+    setIsMobileDrawerOpen(false);
     setSelectedAccount(null);
   };
 
@@ -73,8 +73,21 @@ export function AccountCard({ account }: AccountCardProps) {
             ))}
           </div>
           <Button
-            onClick={() => handleViewDetails(account)}
-            className=" bg-green-600 hover:bg-green-700 text-white"
+            onClick={() => {
+              setSelectedAccount(account);
+              setIsDialogOpen(true);
+            }}
+            className=" bg-green-600 hover:bg-green-700 hidden lg:block text-white"
+          >
+            View Details
+          </Button>
+
+          <Button
+            onClick={() => {
+              setSelectedAccount(account);
+              setIsMobileDrawerOpen(true);
+            }}
+            className=" bg-green-600 hover:bg-green-700 block lg:hidden text-white"
           >
             View Details
           </Button>
@@ -85,6 +98,11 @@ export function AccountCard({ account }: AccountCardProps) {
         account={selectedAccount}
         isOpen={isDialogOpen}
         onClose={handleCloseDialog}
+      />
+      <AccountMobileDrawer
+        account={selectedAccount}
+        isOpen={isMobileDrawerOpen}
+        onClose={handleCloseDrawer}
       />
     </>
   );

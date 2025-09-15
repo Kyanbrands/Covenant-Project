@@ -1,17 +1,23 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 import { Building2 } from "lucide-react";
 import type { AccountData } from "@/app/_data/accounts-data";
 import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+} from "@/components/ui/drawer";
 
 interface AccountDetailDialogProps {
   account: AccountData | null;
@@ -21,7 +27,7 @@ interface AccountDetailDialogProps {
 
 type TabType = "overview" | "features" | "benefits" | "target-clients";
 
-export function AccountDetailDialog({
+export function AccountMobileDrawer({
   account,
   isOpen,
   onClose,
@@ -148,69 +154,35 @@ export function AccountDetailDialog({
         return null;
     }
   };
-
   return (
     <>
-      <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="sm:!max-w-[650px]  !max-h-[80vh] hidden lg:block border-none rounded-4xl overflow-auto bg-[#FEFEFE]  gap-6 ">
-          <DialogHeader className="mb-10">
-            <div className="flex items-center justify-center">
-              <DialogTitle className="text-[#1D9B5E] text-xl text-center font-semibold text-balance">
+      <div className="block lg:hidden">
+        <Drawer open={isOpen} onOpenChange={onClose}>
+          <DrawerContent className="p-4  block lg:hidden bg-[#FEFEFE]">
+            <DrawerHeader>
+              <DrawerTitle className="text-[#1D9B5E] text-lg font-semibold text-center">
                 • {account.name}
-              </DialogTitle>
-            </div>
-          </DialogHeader>
+              </DrawerTitle>
+            </DrawerHeader>
 
-          <div>
-            <div className=" flex justify-between  items-center  py-0  ">
+            <Accordion type="single" collapsible className="w-full">
               {tabs.map((tab) => (
-                <div
-                  className={cn(
-                    activeTab === tab.id
-                      ? "bg-[#F1F5EB] pt-3 px-8 rounded-tl-2xl rounded-t-4xl "
-                      : "p-0   rounded-2xl"
-                  )}
-                  key={tab.id}
-                >
-                  <Button
-                    variant={activeTab === tab.id ? "default" : "ghost"}
-                    size="sm"
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`text-md font-medium rounded-full ${
-                      activeTab === tab.id
-                        ? "bg-[#0D4A06] hover:bg-green-700 transition-all text-[#F1F5EB]"
-                        : "hover:bg-green-50  hover:text-green-700 hover:border-green-200"
-                    }`}
-                  >
-                    {tab.icon && (
-                      <Image src={tab.icon} width={10} height={10} alt="" />
-                    )}
-                    {tab.label}
-                  </Button>
-                </div>
+                <AccordionItem className="border-none" key={tab.id} value={tab.id}>
+                  <AccordionTrigger className="px-4" onClick={() => setActiveTab(tab.id)}>
+                    <div className="flex gap-2 justify-center items-center">
+                      {tab.icon && (
+                        <Image src={tab.icon} width={10} height={10} alt="" />
+                      )}
+                      {tab.label}
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent  className="px-4"  >{renderTabContent()}</AccordionContent>
+                </AccordionItem>
               ))}
-            </div>
-            <div className="bg-[#A2DE49] rounded-b-4xl rounded-tr-4xl">
-              {" "}
-              <div
-                className={cn(
-                  "flex flex-col justify-center  overflow-y-auto h-[415px] py-6 bg-[#F1F5EB] rounded-b-4xl rounded-tr-4xl px-8",
-                  activeTab === "target-clients" && "rounded-none "
-                )}
-              >
-                {renderTabContent()}
-              </div>
-              <div className="flex-shrink-0 pt-0">
-                <Button className="w-full bg-[#A2DE49] rounded-b-4xl hover:bg-green-700 text-black">
-                  <Image src={"/Lightning.png"} width={20} height={20} alt="" />
-                  Visit any Covenant Microfinance Bank branch nearest to you to
-                  apply
-                </Button>
-              </div>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+            </Accordion>
+          </DrawerContent>
+        </Drawer>
+      </div>
     </>
   );
 }
