@@ -19,7 +19,7 @@ export const allBlogPosts: Post[] = [
       "Learn how customizable pricing boosts customer satisfaction and drives revenue growth in the SaaS world...",
     imageSrc: "/image5.png",
     date: "October 23, 2024",
-    slug: "/news/new-branch-abeokuta",
+    slug: "new-branch-abeokuta",
     content: (
       <>
         <p>
@@ -82,7 +82,7 @@ export const allBlogPosts: Post[] = [
       "Pricing perception impacts decision-making. Learn how visual cues and strategic tiering influence customer choices...",
     imageSrc: "/image2.png",
     date: "16 Jun 2024",
-    slug: "/news/psychology-of-pricing",
+    slug: "psychology-of-pricing",
     content: (
       <>
         <p>
@@ -117,7 +117,7 @@ export const allBlogPosts: Post[] = [
       "Learn how customizable pricing boosts customer satisfaction and drives revenue growth in the SaaS world...",
     imageSrc: "/image3.png",
     date: "16 Jun 2024",
-    slug: "/news/flexible-saas-pricing",
+    slug: "flexible-saas-pricing",
     content: (
       <>
         <p>
@@ -152,7 +152,7 @@ export const allBlogPosts: Post[] = [
       "Pricing perception impacts decision-making. Learn how visual cues and strategic tiering influence customer choices...",
     imageSrc: "/image4.png",
     date: "16 Jun 2024",
-    slug: "/news/psychology-of-pricing-2",
+    slug: "psychology-of-pricing-2",
     content: (
       <>
         <p>
@@ -187,7 +187,7 @@ export const allBlogPosts: Post[] = [
       "Starter plans offer cost-effective solutions tailored to small businesses. Find out how they enable growth without breaking the bank....",
     imageSrc: "/image1.png",
     date: "16 Jun 2024",
-    slug: "/news/starter-plans-smb",
+    slug: "starter-plans-smb",
     content: (
       <>
         <p>
@@ -222,7 +222,7 @@ export const allBlogPosts: Post[] = [
       "Learn how customizable pricing boosts customer satisfaction and drives revenue growth in the SaaS world.",
     imageSrc: "/image2.png",
     date: "16 Jun 2024",
-    slug: "/news/flexible-saas-pricing-2",
+    slug: "flexible-saas-pricing-2",
     content: (
       <>
         <p>
@@ -257,7 +257,7 @@ export const allBlogPosts: Post[] = [
       "Exploring the next generation of security protocols that are making digital banking safer than ever before.",
     imageSrc: "/image3.png",
     date: "15 Jun 2024",
-    slug: "/news/digital-banking-security",
+    slug: "digital-banking-security",
     content: (
       <>
         <p>

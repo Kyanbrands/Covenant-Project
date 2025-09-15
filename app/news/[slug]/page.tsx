@@ -24,7 +24,7 @@ const RelatedPostCard: React.FC<{ post: Post }> = ({ post }) => (
       </p>
       <div className="mt-6 flex justify-between items-center">
         <Link
-          href={post.slug}
+          href={`/news/${post.slug}`}
           className="inline-block rounded-lg bg-green-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-700"
         >
           Read More
@@ -35,8 +35,13 @@ const RelatedPostCard: React.FC<{ post: Post }> = ({ post }) => (
   </article>
 );
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = allBlogPosts.find((p) => p.slug === `/news/${params.slug}`);
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const slug = params.slug;
+  const post = allBlogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -95,6 +100,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
 export async function generateStaticParams() {
   return allBlogPosts.map((post) => ({
-    slug: post.slug.split("/").pop(),
+    slug: post.slug,
   }));
 }

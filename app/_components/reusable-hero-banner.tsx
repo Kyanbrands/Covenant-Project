@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import Title from "./title";
 interface PageBannerProps {
   pillText: string;
   title: React.ReactNode;
@@ -13,7 +13,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
   backgroundSvg = "/Vector.svg",
 }) => {
   return (
-    <section className="relative bg-[#031407] overflow-hidden min-h-[650px] z-10  px-6 ">
+    <section className="relative bg-[#031407] overflow-hidden  z-10  px-6 ">
       <Image
         src={backgroundSvg}
         alt="Background pattern"
@@ -23,11 +23,9 @@ const PageBanner: React.FC<PageBannerProps> = ({
 
       {/* Main Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8">
-        {/* Pill Badge */}
-        <span className="mt-4 inline-flex items-center rounded-full bg-[#001102] px-4 py-1.5 text-sm font-medium text-green-200 ring-1 ring-inset ring-green-400/20">
-          <span className="mr-2 h-2 w-2 rounded-full bg-green-400"></span>
-          {pillText}
-        </span>
+        <div className="flex justify-center items-center">
+          <Title text={pillText} borderColor="#001102" textColor="green-200" />
+        </div>
 
         {/* Main Heading */}
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mt-8">
