@@ -1,4 +1,3 @@
-"use client";
 import Carousel from "@/app/_components/carousel";
 import { allBlogPosts, Post } from "@/app/_data/blog-posts";
 import { Section } from "lucide-react";
