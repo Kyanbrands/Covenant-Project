@@ -146,7 +146,7 @@ export function AccountDetailDialog({
   return (
     <>
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="sm:!max-w-[600px] z-[1000] !max-h-[80vh] hidden lg:block rounded-2xl overflow-auto bg-[#FEFEFE]  gap-6 ">
+        <DialogContent className="sm:!max-w-[600px]  !max-h-[80vh] hidden lg:block rounded-2xl overflow-auto bg-[#FEFEFE]  gap-6 ">
           <DialogHeader className="">
             <div className="flex items-center justify-center">
               <DialogTitle className="text-[#1D9B5E] text-xl text-center font-semibold text-balance">
@@ -224,13 +224,7 @@ export function AccountDetailDialog({
               ))}
             </Accordion>
 
-            {/* <div className="pt-4">
-            <Button className="w-full bg-[#A2DE49] hover:bg-green-700 text-black">
-              <Building2 className="w-4 h-4 mr-2" />
-              Visit any Covenant Microfinance Bank branch nearest to you to
-              apply
-            </Button>
-          </div> */}
+          
           </DrawerContent>
         </Drawer>
       </div>
