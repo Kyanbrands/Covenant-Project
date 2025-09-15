@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { faqPageData } from "../_data/faqPageData";
+import { faqPageData } from "../../_data/faqPageData";
 import SectionPill from "@/app/about-us/_components/section-pill";
 const FaqPageContent = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import FaqHeroSection from "../_components/faqHero";
-import FaqPageContent from "../_components/faq-page-content";
+import FaqHeroSection from "./_components/faq-hero";
+import FaqPageContent from "./_components/faq-page-content";
 import Carousel from "../_components/carousel";
 
 function page() {

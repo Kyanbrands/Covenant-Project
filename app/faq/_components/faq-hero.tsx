@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import ReusableBanner from "@/app/_components/reusable-banner";
-import PageBanner from "./reusable-hero-banner";
+import PageBanner from "../../_components/reusable-hero-banner";
 
 const pageTitle = (
   <>
