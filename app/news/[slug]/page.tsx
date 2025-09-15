@@ -1,3 +1,4 @@
+"use client";
 import Carousel from "@/app/_components/carousel";
 import { allBlogPosts, Post } from "@/app/_data/blog-posts";
 import { Section } from "lucide-react";
@@ -38,9 +39,9 @@ const RelatedPostCard: React.FC<{ post: Post }> = ({ post }) => (
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const slug = params.slug;
+  const slug = (await params).slug;
   const post = allBlogPosts.find((p) => p.slug === slug);
 
   if (!post) {
